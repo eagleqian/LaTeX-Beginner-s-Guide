@@ -1,0 +1,7 @@
+\contentsline {section}{\numberline {1}Insert Graphic}{2}{}%
+\contentsline {subsection}{\numberline {1.1}Insert the picture into \textbackslash being\{figure\}..\textbackslash end\{figure\}}{2}{}%
+\contentsline {subsubsection}{\numberline {1.1.1}option:[scale=0.3]}{2}{}%
+\contentsline {subsubsection}{\numberline {1.1.2}option:[width=2cm]}{2}{}%
+\contentsline {subsubsection}{\numberline {1.1.3}Specify the relative width:[0.5\textbackslash textwidth]}{3}{}%
+\contentsline {section}{\numberline {2}Insert table}{3}{}%
+\contentsline {subsection}{\numberline {2.1}Insert table in \textbackslash being\{table\}...\textbackslash end\{table\}}{3}{}%
