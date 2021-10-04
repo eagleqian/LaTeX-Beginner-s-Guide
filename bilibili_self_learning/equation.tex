@@ -7,5 +7,75 @@
 
 
 \begin{document}
-    hello
+    \maketitle
+    \tableofcontents
+    
+    \section{inline Equation}
+    \subsection{dollar character}
+    $f(x)=x^2+3x$
+    \subsection{parenthesis}
+    \(f(x)=x^2+3x\)
+    \subsection{mathematical enviroment}
+    \begin{math}
+        f(x)=x^2+3x
+    \end{math}
+    \section{super/sub script}
+    \subsection{superscript}
+    $f(x)=x^2+3y^{20}$
+    \subsection{subscript}
+    \(f(x)=x^2+3x_{20}\)
+    \section{greek alphabet}
+    \subsection{lowercase}
+    \(\alpha\)
+    \(\beta\)
+    \(\omega_1\)
+    \(\gamma\)
+    \(\pi\)
+
+    \subsection{uppercase}
+    \(\Gamma\)
+    \(\Delta\)
+    \(\Pi^5\)
+    \(\Omega\)
+    \ \(\alpha^2+\beta^3=\omega\)
+    \section{mathematical functions}
+    \(\log_{10}^2 x\)
+    \ \(\sin^2 x\)
+    \ \(\cos^3 y\)
+    \ \(\arcsin x\)
+    \ \(\arccos z\)
+    \ \(\ln x\)
+    \ \(\sqrt{3x^2+2y^4_2}\)
+    \ \(\sqrt[5]{3x}\)
+    \section{algebraic fraction}
+    \(3/4\)
+    \ \(\frac{x}{y}\)
+    \ \(\frac{\sqrt{2y_2^5}}{\sqrt[6]{\sin^2 x+\arcsin z_4^2}}\)
+    \section{equation between lines}
+    use \$\$...\$\$ insert equation
+    $$f(x)=3x+y^3$$    
+    
+    \subsection{square brackets}
+    use \textbackslash [equation...\textbackslash ] insert equation
+    \[f(x)=3x+y^3\] % used commonly to insert equation between lines
+    
+    \subsection{environment of displaymath}
+    \begin{displaymath}
+        f(x)=3x+y^3
+    \end{displaymath}
+    
+    \subsection{environment where equation enumerated automatically}
+    Refer the equation \ref{equation_1}
+
+    \begin{equation}
+        f(x)=3x+z^3
+        \label{equation_1}
+    \end{equation}
+    
+    \subsection{environment where equation* are not enumerated }
+    Refer the equation \ref{equation_2}
+    \begin{equation} %equation with numbers
+        f(x)=3x+z^6
+        \label{equation_2}
+    \end{equation}
 \end{document}
