@@ -3,7 +3,7 @@
 \title{Insert Equation}
 \date{\today}
 
-
+\usepackage{amsmath}
 
 
 \begin{document}
@@ -13,17 +13,22 @@
     \section{inline Equation}
     \subsection{dollar character}
     $f(x)=x^2+3x$
+
     \subsection{parenthesis}
     \(f(x)=x^2+3x\)
+
     \subsection{mathematical enviroment}
     \begin{math}
         f(x)=x^2+3x
     \end{math}
+
     \section{super/sub script}
     \subsection{superscript}
     $f(x)=x^2+3y^{20}$
+
     \subsection{subscript}
     \(f(x)=x^2+3x_{20}\)
+
     \section{greek alphabet}
     \subsection{lowercase}
     \(\alpha\)
@@ -38,6 +43,7 @@
     \(\Pi^5\)
     \(\Omega\)
     \ \(\alpha^2+\beta^3=\omega\)
+
     \section{mathematical functions}
     \(\log_{10}^2 x\)
     \ \(\sin^2 x\)
@@ -47,11 +53,14 @@
     \ \(\ln x\)
     \ \(\sqrt{3x^2+2y^4_2}\)
     \ \(\sqrt[5]{3x}\)
+
     \section{algebraic fraction}
     \(3/4\)
     \ \(\frac{x}{y}\)
     \ \(\frac{\sqrt{2y_2^5}}{\sqrt[6]{\sin^2 x+\arcsin z_4^2}}\)
+
     \section{equation between lines}
+
     use \$\$...\$\$ insert equation
     $$f(x)=3x+y^3$$    
     
@@ -66,16 +75,41 @@
     
     \subsection{environment where equation enumerated automatically}
     Refer the equation \ref{equation_1}
-
     \begin{equation}
-        f(x)=3x+z^3
+        f(x)=3x+z^3 
         \label{equation_1}
     \end{equation}
     
     \subsection{environment where equation* are not enumerated }
     Refer the equation \ref{equation_2}
-    \begin{equation} %equation with numbers
+    \begin{equation*} %equation without numbers
         f(x)=3x+z^6
         \label{equation_2}
+    \end{equation*}
+
+    \subsection{Equation in Multiple lines}
+    \begin{gather} % Need to use package <amsmath>
+        f(x)=3x+z^3  \\ 
+        \notag \\ 
+        \frac{\sqrt{2y_2^5}}{\sqrt[6]{\sin^2 x+\arcsin z_4^2}} \notag \\
+        f(z)=\frac{x_2^5}{y_3^7}
+    \end{gather}
+
+    \subsection{Split Equation}
+    \begin{equation} % Single Equation but can split in multiple lines
+        \begin{split} % Use \begin{split}...\end{split} to realize it  
+            f(x)=3x+4x^2 \\
+            f(x)=\sin^2 x \\
+            f(x)=\cos x^3 
+        \end{split}
     \end{equation}
+
+    \subsection{Piecewise funtion}
+    \begin{equation}
+        D(x)=\begin{cases}
+            3x & \text{if }  x \in R \\
+            x^2 & \text{if } x \in Z \setminus Q
+        \end{cases}
+    \end{equation}
+    
 \end{document}

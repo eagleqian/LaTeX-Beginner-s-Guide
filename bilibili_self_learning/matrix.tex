@@ -1,114 +1,117 @@
 \documentclass{article}
-\author{Qian Liu}
-\title{Insert Matrix}
+\author{QianLiu}
+\title{Insert Equation}
 \date{\today}
 
+\usepackage{amsmath}
 
-\usepackage{amsmath} % Used to construct matrix
 
 \begin{document}
-\maketitle
-\tableofcontents
+    \maketitle
+    \tableofcontents
+    
+    \section{inline Equation}
+    \subsection{dollar character}
+    $f(x)=x^2+3x$
 
-\newpage
-\section{Insert Matrix}
-Notice that: the matrix must be located
-in
+    \subsection{parenthesis}
+    \(f(x)=x^2+3x\)
 
-\textbackslash[
+    \subsection{mathematical enviroment}
+    \begin{math}
+        f(x)=x^2+3x
+    \end{math}
 
-    \quad\textbackslash begin\{matrix\}
+    \section{super/sub script}
+    \subsection{superscript}
+    $f(x)=x^2+3y^{20}$
 
-    ...
+    \subsection{subscript}
+    \(f(x)=x^2+3x_{20}\)
+    % --------------------------------------------------------------
+    \section{greek alphabet}
+    \subsection{lowercase}
+    \(\alpha\)
+    \(\beta\)
+    \(\omega_1\)
+    \(\gamma\)
+    \(\pi\)
 
-    \quad\textbackslash end\{matrix\}
+    \subsection{uppercase}
+    \(\Gamma\)
+    \(\Delta\)
+    \(\Pi^5\)
+    \(\Omega\)
+    \ \(\alpha^2+\beta^3=\omega\)
 
-    \textbackslash]
-\subsubsection{No delimiter}
-\[
-    \begin{matrix}
-        1 & 3 \\
-        2 & 4 \\    
-    \end{matrix}
-\]
+    \section{mathematical functions}
+    \(\log_{10}^2 x\)
+    \ \(\sin^2 x\)
+    \ \(\cos^3 y\)
+    \ \(\arcsin x\)
+    \ \(\arccos z\)
+    \ \(\ln x\)
+    \ \(\sqrt{3x^2+2y^4_2}\)
+    \ \(\sqrt[5]{3x}\)
 
-\subsubsection{delimiter is parenthesis:()}
-\[
-    \begin{pmatrix}
-        1 & 3 \\
-        2 & 4 \\
-    \end{pmatrix}
-\]
+    \section{algebraic fraction}
+    \(3/4\)
+    \ \(\frac{x}{y}\)
+    \ \(\frac{\sqrt{2y_2^5}}{\sqrt[6]{\sin^2 x+\arcsin z_4^2}}\)
 
-\subsubsection{delimiter is square bracket:()}
-\[
-    \begin{bmatrix}
-        1 & 3 \\
-        2 & 4 \\
-    \end{bmatrix}
-\]
+    % --------------------------------------------------------------
+    \section{equation between lines}
 
-\subsubsection{delimiter is curly bracket}
-\[
-    \begin{Bmatrix}
-        1 & 3 \\
-        2 & 4 \\
-    \end{Bmatrix}
-\]
+    use \$\$...\$\$ insert equation
+    $$f(x)=3x+y^3$$    
+    
+    \subsection{square brackets}
+    use \textbackslash [equation...\textbackslash ] insert equation
+    \[f(x)=3x+y^3\] % used commonly to insert equation between lines
+    
+    \subsection{environment of displaymath}
+    \begin{displaymath}
+        f(x)=3x+y^3
+    \end{displaymath}
 
-\subsubsection{delimiter is single vertical line}
-\[
-    \begin{vmatrix}
-        1 & 3 \\
-        2 & 4 \\
-    \end{vmatrix}
-\]
+    \subsection{environment where equation enumerated automatically}
+    Refer the equation \ref{equation_1}
+    \begin{equation}
+        f(x)=3x+z^3 
+        \label{equation_1}
+    \end{equation}
+    
+    \subsection{environment where equation* are not enumerated }
+    Refer the equation \ref{equation_2}
+    \begin{equation*} %equation without numbers
+        f(x)=3x+z^6
+        \label{equation_2}
+    \end{equation*}
 
-\subsubsection{delimiter is double vertical lines}
-\[
-    \begin{Vmatrix}
-        1 & 3 \\
-        2 & 4 \\
-    \end{Vmatrix}
-\]
+    \subsection{Equation in Multiple lines}
+    \begin{gather} % Need to use package <amsmath>
+        f(x)=3x+z^3  \\ 
+        \notag \\ 
+        \frac{\sqrt{2y_2^5}}{\sqrt[6]{\sin^2 x+\arcsin z_4^2}} \notag \\
+        f(z)=\frac{x_2^5}{y_3^7}
+    \end{gather}
 
-\subsubsection{Ellipsis: \textbackslash dots \textbackslash vdots \textbackslash ddots}
-\[
-\begin{bmatrix}
-    1 & \dots & 3 \\
-    4 & \ddots & \vdots \\
-    7 & 8 & 9 \\
-\end{bmatrix}_{3 \times 3}
-\begin{bmatrix}
-        1 & \dots & 3 \\
-        \hdotsfor{3} \\
-        7 & 8 & 9 \\
-\end{bmatrix}
-\]
+    % --------------------------------------------------------------
+    \subsection{Split Equation}
+    \begin{equation} % Single Equation but can split in multiple lines
+        \begin{split} % Use \begin{split}...\end{split} to realize it  
+            f(x)=3x+4x^2 \\
+            f(x)=\sin^2 x \\
+            f(x)=\cos x^3 
+        \end{split}
+    \end{equation}
 
-\subsubsection{Partitioned Matrix}
-\[
-\begin{bmatrix}
-    \begin{matrix}
-        1 & 2 \\
-        3 & 4 \\
-    \end{matrix} 
-    & \text{\Large 0} \\
-
-    \text{\Large 0} 
-    & \begin{matrix}
-        1 & 2 \\
-        3 & 4 \\
-    \end{matrix} \\
-\end{bmatrix}_{4 \times 4} 
-\]
-
-\[
-\begin{bmatrix}
-    1 & 2 & 3 & 4 \\
-    5 & 6 & 7 & 8 \\
-    9 & 10 & 11 & 12 \\
-\end{bmatrix}
-\]
-
+    \subsection{Piecewise funtion}
+    \begin{equation}
+        D(x)=\begin{cases}
+            3x & \text{if }  x \in R \\
+            x^2 & \text{if } x \in Z \setminus Q
+        \end{cases}
+    \end{equation}
+    
 \end{document}
